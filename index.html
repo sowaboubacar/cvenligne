@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sow Aboubacar - Développeur Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e0f2ff, #ffffff);
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: #0077cc;
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #e7f3ff;
+      color: #005fa3;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin: 6px 6px 0 0;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .contact p {
+      margin: 5px 0;
+      font-weight: 500;
+    }
+
+    .photo-placeholder {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #eee;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .btn-pdf {
+      display: inline-block;
+      background: #0077cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 20px auto 40px;
+      text-align: center;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn-pdf:hover {
+      background: #005fa3;
+    }
+
+    @media print {
+      .btn-pdf { display: none; }
+      body { background: #fff; }
+      .container { box-shadow: none; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="btn-pdf" onclick="generatePDF()">📄 Télécharger mon CV en PDF</div>
+
+  <div class="container" id="cv">
+    <div class="header">
+      <div class="photo-placeholder"><img src="images.jpeg" alt="Sow Aboubacar" style="width:140px; height:140px; border-radius:50%;"></div>
+      <h1>Sow Aboubacar</h1>
+      <p>Développeur Web | Ingénieur Logiciel | Référent Digital</p>
+    </div>
+
+    <div class="section">
+      <h2>À propos de moi</h2>
+      <p>
+        Développeur web passionné, titulaire d’un Master en Génie Logiciel, j’ai une solide expérience dans la création de solutions numériques sur mesure : sites web, plateformes de gestion, blogs, et déploiement cloud. Curieux, autonome, et proactif, je m'efforce d'allier rigueur technique et sens du design.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Compétences techniques</h2>
+      <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>WordPress</span>
+        <span>Google Analytics</span>
+        <span>GitHub</span>
+        <span>Comunity management</span>
+        <span>Photoshop</span>
+        <span>Canva</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Projets réalisés</h2>
+      <ul>
+        <li><strong>Système de gestion scolaire</strong> (Laravel) – Suivi des étudiants, gestion des notes, génération de bulletins PDF</li>
+        <li><strong>Blog dynamique</strong> – Gestion complète des articles, commentaires, tags avec système d’authentification</li>
+        <li><strong>Site vitrine pour ONG</strong> – WordPress optimisé avec sections blog, contact, galerie, responsive</li>
+        <li><strong>Solution e-commerce pour fournitures scolaires</strong> – Devis automatique en ligne, gestion des commandes</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Expérience professionnelle</h2>
+      <ul>
+        <li><strong>Free lance Développeur web</strong> en janvier 2025</li>
+        <li><strong>Référent digital</strong> – Geofoncia Group (2024)</li>
+        <li><strong>Formateur bureautique </strong> – Best Africa Contact (2022)</li>
+        <li><strong>Technico-commercial</strong> – ECFA Motors (2020-2021)</li>
+        <li><strong>Stagiaire informaticien</strong> – Centre National des Arts et de la Culture (2019-2020)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Formations & Certifications</h2>
+      <ul>
+        <li>🎓 Master 2 & 1 en Génie Logiciel – 2021–2022 à L’Académie Libre de Technologie à Abidjan </li>
+        <li>🎓 Licence Pro en Génie Logiciel – 2020 à L’Académie Libre de Technologie à Abidjan </li>
+        <li>🔐 Certification Sécurité des SI – 2021</li>
+        <li>📈 Certification Google Marketing Digital – 2020</li>
+      </ul>
+    </div>
+
+    <div class="section contact">
+      <h2>Contact</h2>
+      <p>📧 aboubacarsow126@gmail.com</p>
+      <p>🔗 LinkedIn : https://www.linkedin.com/in/sow-aboubacar-922b781b9/</p>
+      <p>💻 GitHub : github.com/sowaboubacar</p>
+      <p>📍 Abidjan, Côte d’Ivoire</p>
+    </div>
+  </div>
+
+  <script>
+    function generatePDF() {
+      const element = document.getElementById("cv");
+      const opt = {
+        margin:       0.3,
+        filename:     'CV_Sow_Aboubacar.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().from(element).set(opt).save();
+    }
+  </script>
+
+</body>
+</html>
