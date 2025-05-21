@@ -5,23 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sow Aboubacar - Développeur Web</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #e0f2ff, #ffffff);
-      color: #333;
+      background: linear-gradient(145deg, #1f1c2c, #928dab);
+      color: #f0f0f0;
       padding: 40px 20px;
+      background-attachment: fixed;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
-      background: white;
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      background: #1e1e2f;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     }
 
     .header {
@@ -30,86 +32,104 @@
     }
 
     .header h1 {
-      font-size: 36px;
-      color: #0077cc;
+      font-size: 40px;
+      color: #4fc3f7;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .header p {
       font-size: 18px;
-      color: #555;
+      color: #ccc;
     }
 
     .section {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     h2 {
-      color: #0077cc;
-      margin-bottom: 15px;
-      font-size: 24px;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 6px;
+      color: #81d4fa;
+      font-size: 26px;
+      border-bottom: 2px solid #4fc3f7;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
 
     .skills span {
       display: inline-block;
-      background: #e7f3ff;
-      color: #005fa3;
-      padding: 8px 12px;
-      border-radius: 6px;
+      background: #4fc3f7;
+      color: #1e1e2f;
+      padding: 8px 14px;
+      border-radius: 20px;
       margin: 6px 6px 0 0;
-      font-weight: 500;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+
+    .skills span:hover {
+      transform: scale(1.1);
     }
 
     ul {
-      list-style: disc;
+      list-style: none;
       padding-left: 20px;
     }
 
     li {
-      margin-bottom: 10px;
-      line-height: 1.6;
+      margin-bottom: 12px;
+      line-height: 1.7;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    li::before {
+      content: "\2714";
+      position: absolute;
+      left: 0;
+      color: #4fc3f7;
     }
 
     .contact p {
       margin: 5px 0;
       font-weight: 500;
+      color: #ccc;
     }
 
     .photo-placeholder {
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background: #eee;
+      background: #333;
       margin: 20px auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #aaa;
+      color: #888;
       font-size: 14px;
     }
 
     .btn-pdf {
-      display: inline-block;
-      background: #0077cc;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
+      display: block;
+      background: #4fc3f7;
+      color: #1e1e2f;
+      padding: 14px 24px;
+      border-radius: 30px;
       text-decoration: none;
-      font-weight: 600;
-      margin: 20px auto 40px;
+      font-weight: 700;
+      margin: 30px auto;
       text-align: center;
+      width: fit-content;
+      box-shadow: 0 10px 20px rgba(79, 195, 247, 0.3);
       transition: background 0.3s ease;
       cursor: pointer;
     }
 
     .btn-pdf:hover {
-      background: #005fa3;
+      background: #29b6f6;
     }
 
     @media print {
       .btn-pdf { display: none; }
-      body { background: #fff; }
+      body { background: #fff; color: #000; }
       .container { box-shadow: none; padding: 20px; }
     }
   </style>
@@ -128,56 +148,47 @@
     <div class="section">
       <h2>À propos de moi</h2>
       <p>
-        Développeur web passionné, titulaire d’un Master en Génie Logiciel, j’ai une solide expérience dans la création de solutions numériques sur mesure : sites web, plateformes de gestion, blogs, et déploiement cloud. Curieux, autonome, et proactif, je m'efforce d'allier rigueur technique et sens du design.
+        Passionné par la technologie, développeur web orienté solution avec une approche design-first. Diplômé en Génie Logiciel, j'ai conçu plusieurs applications web complètes et scalables. J'aime transformer des idées en interfaces fluides et impactantes.
       </p>
     </div>
 
     <div class="section">
       <h2>Compétences techniques</h2>
       <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>WordPress</span>
-        <span>Google Analytics</span>
-        <span>GitHub</span>
-        <span>Comunity management</span>
-        <span>Photoshop</span>
-        <span>Canva</span>
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>Laravel</span>
+        <span>MySQL</span><span>WordPress</span><span>Google Analytics</span><span>GitHub</span>
+        <span>Comunity Management</span><span>Photoshop</span><span>Canva</span>
       </div>
     </div>
 
     <div class="section">
       <h2>Projets réalisés</h2>
       <ul>
-        <li><strong>Système de gestion scolaire</strong> (Laravel) – Suivi des étudiants, gestion des notes, génération de bulletins PDF</li>
-        <li><strong>Blog dynamique</strong> – Gestion complète des articles, commentaires, tags avec système d’authentification</li>
-        <li><strong>Site vitrine pour ONG</strong> – WordPress optimisé avec sections blog, contact, galerie, responsive</li>
-        <li><strong>Solution e-commerce pour fournitures scolaires</strong> – Devis automatique en ligne, gestion des commandes</li>
+        <li><strong>Système de gestion scolaire</strong> (Laravel) – Gestion complète des étudiants et bulletins PDF</li>
+        <li><strong>Blog dynamique</strong> – Articles, commentaires, tags, authentification</li>
+        <li><strong>Site ONG</strong> – WordPress, sections responsives, galerie & contact</li>
+        <li><strong>E-commerce fournitures</strong> – Devis automatique, gestion commandes</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Expérience professionnelle</h2>
       <ul>
-        <li><strong>Free lance Développeur web</strong> en janvier 2025</li>
+        <li><strong>Freelance Développeur Web</strong> – Depuis janvier 2025</li>
         <li><strong>Référent digital</strong> – Geofoncia Group (2024)</li>
-        <li><strong>Formateur bureautique </strong> – Best Africa Contact (2022)</li>
+        <li><strong>Formateur bureautique</strong> – Best Africa Contact (2022)</li>
         <li><strong>Technico-commercial</strong> – ECFA Motors (2020-2021)</li>
-        <li><strong>Stagiaire informaticien</strong> – Centre National des Arts et de la Culture (2019-2020)</li>
+        <li><strong>Stagiaire informaticien</strong> – CNAC (2019-2020)</li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Formations & Certifications</h2>
       <ul>
-        <li>🎓 Master 2 & 1 en Génie Logiciel – 2021–2022 à L’Académie Libre de Technologie à Abidjan </li>
-        <li>🎓 Licence Pro en Génie Logiciel – 2020 à L’Académie Libre de Technologie à Abidjan </li>
-        <li>🔐 Certification Sécurité des SI – 2021</li>
-        <li>📈 Certification Google Marketing Digital – 2020</li>
+        <li>🎓 Master 2 & 1 en Génie Logiciel – ALT Abidjan</li>
+        <li>🎓 Licence Pro en Génie Logiciel – ALT Abidjan</li>
+        <li>🔐 Certif. Sécurité SI (2021)</li>
+        <li>📈 Certif. Marketing Digital Google (2020)</li>
       </ul>
     </div>
 
